@@ -1,0 +1,5 @@
+parameters:
+    # meniu contact email address
+    meniu.emails.contact_email: symfonyrestaurant@gmail.com
+    # Nume restaurant
+    restaurant: puiul rumenit

@@ -1,0 +1,4 @@
+services:
+#    meniu.example:
+#        class: MeniuBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

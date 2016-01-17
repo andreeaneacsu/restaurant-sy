@@ -1,0 +1,75 @@
+MeniuBundle\Entity\Meniu:
+    type: entity
+    table: meniu
+    indexes:
+        fk_meniu_produse_idx:
+            columns:
+                - ciorba
+        fk_meniu_produse1_idx:
+            columns:
+                - felul2
+        fk_meniu_produse2_idx:
+            columns:
+                - garnitura
+        fk_meniu_produse3_idx:
+            columns:
+                - salata
+        fk_meniu_produse4_idx:
+            columns:
+                - desert
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        ciorba:
+            targetEntity: Produse
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ciorba:
+                    referencedColumnName: id
+            orphanRemoval: false
+        felul2:
+            targetEntity: Produse
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                felul2:
+                    referencedColumnName: id
+            orphanRemoval: false
+        garnitura:
+            targetEntity: Produse
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                garnitura:
+                    referencedColumnName: id
+            orphanRemoval: false
+        salata:
+            targetEntity: Produse
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                salata:
+                    referencedColumnName: id
+            orphanRemoval: false
+        desert:
+            targetEntity: Produse
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                desert:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

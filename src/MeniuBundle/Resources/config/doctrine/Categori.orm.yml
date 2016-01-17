@@ -1,0 +1,30 @@
+MeniuBundle\Entity\Categori:
+    type: entity
+    table: categori
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nume:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            comment: ''
+        poza:
+            type: string
+            nullable: false
+            length: 30
+            fixed: false
+            comment: ''
+    oneToMany:
+        produse:
+            targetEntity: Produse
+            mappedBy: categorie_id
+    lifecycleCallbacks: {  }

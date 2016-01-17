@@ -1,0 +1,16 @@
+{% extends '::base.html.twig' %}
+
+{% block sidebar %}
+    <h1>Produse</h1>
+        <ul>
+        {% for c in cat1 %}
+            {% set i = loop.index %}
+            {% set c = cat1[i-1] %}
+            <li><a href="{{ path('produse_categorie', { 'categ': (i-1) }) }}">{{c}}</a><li>
+            <ol>
+            {% for entity in entities if entity.categorie==(i-1) %}
+                <li><a href="{{ path('produse_show', { 'id': entity.id }) }}">{{ entity.nume }}</a></li>    
+            {% endfor %}
+            <hr>
+       {% endfor %}
+{% endblock %}

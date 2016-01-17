@@ -1,0 +1,4 @@
+meniu:
+    resource: "@MeniuBundle/Resources/config/routing.yml"
+    prefix:   /
+

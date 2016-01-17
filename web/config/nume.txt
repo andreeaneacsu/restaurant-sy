@@ -1,0 +1,1 @@
+{%set restaurant, moto = 'puiul de aur', 'pofta buna'

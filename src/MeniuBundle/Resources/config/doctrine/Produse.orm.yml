@@ -1,0 +1,52 @@
+MeniuBundle\Entity\Produse:
+    type: entity
+    table: produse
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nume:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+        categorie_id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+        descriere:
+            type: text
+            nullable: false
+            length: 255
+        pret:
+            type: decimal
+            nullable: true
+            precision: 6
+            scale: 2
+            comment: ''
+        masura:
+            type: decimal
+            nullable: true
+            precision: 6
+            scale: 0
+            comment: ''
+        um:
+            type: text
+            nullable: true
+            length: 10
+    manyToOne:
+        categori:
+            targetEntity: Categori
+            inversedBy: produse
+            joinColumn:
+                name: categorie_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

@@ -1,0 +1,4 @@
+Symfony commands:
+php app\console server:run
+php app\console doctrine:generate:entities MeniuBundle - face clasele pentru baza de date
+php app\console doctrine:schema:update --force creaza modificarile in baza de date

@@ -1,0 +1,33 @@
+produse:
+    path:     /
+    defaults: { _controller: "MeniuBundle:Produse:index" }
+
+produse_show:
+    path:     /{id}/show
+    defaults: { _controller: "MeniuBundle:Produse:show" }
+
+produse_new:
+    path:     /new
+    defaults: { _controller: "MeniuBundle:Produse:new" }
+
+produse_create:
+    path:     /create
+    defaults: { _controller: "MeniuBundle:Produse:create" }
+    methods:  POST
+
+produse_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MeniuBundle:Produse:edit" }
+
+produse_update:
+    path:     /{id}/update
+    defaults: { _controller: "MeniuBundle:Produse:update" }
+    methods:  [POST, PUT]
+
+produse_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MeniuBundle:Produse:delete" }
+    methods:  [POST, DELETE]
+produse_categorie:
+    path:     /{categ}/categorie
+    defaults: { _controller: "MeniuBundle:Produse:categorie" }

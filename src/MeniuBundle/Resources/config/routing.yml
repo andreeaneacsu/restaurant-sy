@@ -1,0 +1,22 @@
+meniu_produse:
+    resource: "@MeniuBundle/Resources/config/routing/produse.yml"
+    prefix:   /produse
+
+# src/MeniuBundle/Resources/config/routing.yml
+MeniuBundle_homepage:
+    pattern:  /
+    defaults: { _controller: MeniuBundle:Page:index }
+    requirements:
+        _method:  GET
+# src/MeniuBundle/Resources/config/routing.yml
+MeniuBundle_about:
+    pattern:  /about
+    defaults: { _controller: MeniuBundle:Page:about }
+    requirements:
+        _method:  GET
+# src/MeniuBundle/Resources/config/routing.yml
+MeniuBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: MeniuBundle:Page:contact }
+    requirements:
+        _method:  GET|POST
